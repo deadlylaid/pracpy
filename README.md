@@ -71,3 +71,24 @@ python version 3.6.1
 - 클래스 메소드는 모든 인스턴스가 공유하는 데이터를 생성,변경,참초를 위해 존재하는 메소드이다.
 - 스테틱 메소드는 클래스나, 인스턴스를 인자로 받지 않는다. 다만 클래스를 통해서도, 인스턴스를 통해서도 호출할 수 있다.
     - 스테틱 메소드는 클래스네임스페이드에 존재는 하지만 일반 함수와 전혀 다를 것이 없다. 호출이 편할 뿐이다.
+
+*******
+## OOP Part 5. 상속과 서브 클래스형식의
+
+- 상속은 부모 클래스를 상속받는 하위 클래스를 말한다.
+- help()함수는 사용된 함수가 어느 클래스에서 상속되어 온 것인지 확인할 때 쓴다.
+- 기존의 부모 클래스에 정의 되어있던 함수의 값들을 중복해서 쓰는 것은 매우 좋지 않다.
+```python
+ class Parent:
+    def __init__(self):
+        print("it is paraent")
+
+class SubClass(Parent):
+    def __init__(self):
+        Parent.__init__(self)
+
+### 다중 상속일 경우
+class SubClass2(paraent, SubClass):
+    def __init__(self):
+        super(SubClass2, self).__init__()
+```
