@@ -92,3 +92,12 @@ class SubClass2(paraent, SubClass):
     def __init__(self):
         super(SubClass2, self).__init__()
 ```
+
+*******
+## OOP Part 6. 매직 메소드
+
+[메직 매소드](http://schoolofweb.net/blog/posts/%ED%8C%8C%EC%9D%B4%EC%8D%AC-oop-part-6-%EB%A7%A4%EC%A7%81-%EB%A9%94%EC%86%8C%EB%93%9C-magic-method/)
+
+- 더블 언더스코어`__`를 붙여서 불리는 메소드
+    - `__str__`, `__add__` 등이 있다.
+    - `x + y`를 실행하면 `__add__`메소드가 실행되며 백그라운드에서는 `x.__add__(y)`가 실행되는 상황이 된다.
