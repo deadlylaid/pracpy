@@ -1,5 +1,6 @@
-list_a = list(input())
-result = 0
-for i in list_a:
-    result+=int(i)
-print(result)
+def solution(n):
+    a=list(str(n))
+    answer = 0
+    for i in a:
+        answer+=int(i)
+    return answer
