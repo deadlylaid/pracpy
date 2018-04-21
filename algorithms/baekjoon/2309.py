@@ -1,18 +1,22 @@
 list_a = []
-total= 0
+total = 0
 for i in range(9):
-    A = input()
-    list_a.append(int(A))
-    total+=int(A)
+    list_a.append(int(input()))
+total = sum(list_a)
 
-for j in list_a[0:]:
-    for k in list_a[0:]:
-        if j==k:
+for i in range(8):
+    for j in range(i+1, 9):
+        if total - (list_a[i] + list_a[j]) == 100:
+            number1 = list_a[i]
+            number2 = list_a[j]
+            list_a.remove(number1)
+            list_a.remove(number2)
+            break
+        else:
             continue
-        elif total -(j+k)==100:
-            list_a.remove(j)
-            list_a.remove(k)
+    if len(list_a) < 9:
+        break
 
-list_a.sort()
-for l in list_a[0:]:
-    print(l)
+list_a = sorted(list_a)
+for i in list_a:
+    print(i)
