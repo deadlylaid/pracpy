@@ -13,10 +13,6 @@ def fibo(n):
     else:
         return fibo(n-1) + fibo(n-2)
 
-#result_list = []
-#
-#for num in num_list:
-#    result_list.append(fibo(num))
 def return_fibo(n):
     return fibo(n)
 
